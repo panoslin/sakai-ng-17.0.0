@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { CountryService } from 'src/app/demo/service/country.service';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { MultiSelectModule } from 'primeng/multiselect';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputNumberModule } from 'primeng/inputnumber';
-import { InputMaskModule } from 'primeng/inputmask';
-import { PasswordModule } from 'primeng/password';
-import { ChipsModule } from 'primeng/chips';
-import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { InputTextModule } from 'primeng/inputtext';
+import {Component, OnInit} from '@angular/core';
+import {CountryService} from 'src/app/demo/service/country.service';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {InputMaskModule} from 'primeng/inputmask';
+import {PasswordModule} from 'primeng/password';
+import {ChipsModule} from 'primeng/chips';
+import {CalendarModule} from 'primeng/calendar';
+import {FormsModule} from '@angular/forms';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {InputTextModule} from 'primeng/inputtext';
 
 @Component({
     templateUrl: './invalidstatedemo.component.html',
@@ -47,11 +47,11 @@ export class InvalidStateDemoComponent implements OnInit {
 
     constructor(private countryService: CountryService) {
         this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
+            {name: 'New York', code: 'NY'},
+            {name: 'Rome', code: 'RM'},
+            {name: 'London', code: 'LDN'},
+            {name: 'Istanbul', code: 'IST'},
+            {name: 'Paris', code: 'PRS'}
         ];
     }
 
@@ -75,5 +75,5 @@ export class InvalidStateDemoComponent implements OnInit {
 
         this.filteredCountries = filtered;
     }
-    
+
 }

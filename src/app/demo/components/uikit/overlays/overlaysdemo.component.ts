@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ConfirmationService, MessageService, SharedModule } from 'primeng/api';
-import { Product } from 'src/app/demo/api/product';
-import { ProductService } from 'src/app/demo/service/product.service';
-import { ConfirmPopupModule } from 'primeng/confirmpopup';
-import { RippleModule } from 'primeng/ripple';
-import { TooltipModule } from 'primeng/tooltip';
-import { InputTextModule } from 'primeng/inputtext';
-import { SidebarModule } from 'primeng/sidebar';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { TableModule } from 'primeng/table';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
-import { ToastModule } from 'primeng/toast';
+import {Component, OnInit} from '@angular/core';
+import {ConfirmationService, MessageService, SharedModule} from 'primeng/api';
+import {Product} from 'src/app/demo/api/product';
+import {ProductService} from 'src/app/demo/service/product.service';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import {RippleModule} from 'primeng/ripple';
+import {TooltipModule} from 'primeng/tooltip';
+import {InputTextModule} from 'primeng/inputtext';
+import {SidebarModule} from 'primeng/sidebar';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {TableModule} from 'primeng/table';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {ButtonModule} from 'primeng/button';
+import {DialogModule} from 'primeng/dialog';
+import {ToastModule} from 'primeng/toast';
 
 @Component({
     templateUrl: './overlaysdemo.component.html',
@@ -40,7 +40,8 @@ export class OverlaysDemoComponent implements OnInit {
 
     visibleSidebar5: boolean = false;
 
-    constructor(private productService: ProductService, private confirmationService: ConfirmationService, private messageService: MessageService) { }
+    constructor(private productService: ProductService, private confirmationService: ConfirmationService, private messageService: MessageService) {
+    }
 
     ngOnInit() {
         this.productService.getProductsSmall().then(products => this.products = products);
@@ -78,16 +79,16 @@ export class OverlaysDemoComponent implements OnInit {
             message: 'Are you sure that you want to proceed?',
             icon: 'pi pi-exclamation-triangle',
             accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
+                this.messageService.add({severity: 'info', summary: 'Confirmed', detail: 'You have accepted'});
             },
             reject: () => {
-                this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
+                this.messageService.add({severity: 'error', summary: 'Rejected', detail: 'You have rejected'});
             }
         });
     }
 
     formatCurrency(value: number) {
-        return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
     }
-    
+
 }

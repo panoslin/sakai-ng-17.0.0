@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { EmptyDemoRoutingModule } from './emptydemo-routing.module';
-import { EmptyDemoComponent } from './emptydemo.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {EmptyDemoRoutingModule} from './emptydemo-routing.module';
+import {EmptyDemoComponent} from './emptydemo.component';
 
 @NgModule({
     imports: [
@@ -10,4 +10,5 @@ import { EmptyDemoComponent } from './emptydemo.component';
         EmptyDemoComponent
     ]
 })
-export class EmptyDemoModule { }
+export class EmptyDemoModule {
+}

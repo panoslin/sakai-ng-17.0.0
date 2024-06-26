@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ErrorRoutingModule } from './error-routing.module';
-import { ErrorComponent } from './error.component';
-import { ButtonModule } from 'primeng/button';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ErrorRoutingModule} from './error-routing.module';
+import {ErrorComponent} from './error.component';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
     imports: [
@@ -12,4 +12,5 @@ import { ButtonModule } from 'primeng/button';
         ErrorComponent
     ]
 })
-export class ErrorModule { }
+export class ErrorModule {
+}

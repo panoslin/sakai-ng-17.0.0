@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IconService } from 'src/app/demo/service/icon.service';
-import { NgFor } from '@angular/common';
-import { InputTextModule } from 'primeng/inputtext';
+import {Component, OnInit} from '@angular/core';
+import {IconService} from 'src/app/demo/service/icon.service';
+import {NgFor} from '@angular/common';
+import {InputTextModule} from 'primeng/inputtext';
 
 @Component({
     templateUrl: './icons.component.html',
@@ -16,7 +16,8 @@ export class IconsComponent implements OnInit {
 
     selectedIcon: any;
 
-    constructor(private iconService: IconService) { }
+    constructor(private iconService: IconService) {
+    }
 
     ngOnInit() {
         this.iconService.getIcons().subscribe(data => {
@@ -44,8 +45,7 @@ export class IconsComponent implements OnInit {
 
         if (!searchText) {
             this.filteredIcons = this.icons;
-        }
-        else {
+        } else {
             this.filteredIcons = this.icons.filter(it => {
                 return it.icon.tags[0].includes(searchText);
             });

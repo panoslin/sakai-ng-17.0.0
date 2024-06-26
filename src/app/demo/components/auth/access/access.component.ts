@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
+import {Component} from '@angular/core';
+import {RouterLink} from '@angular/router';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
     selector: 'app-access',
@@ -8,4 +8,5 @@ import { ButtonModule } from 'primeng/button';
     standalone: true,
     imports: [ButtonModule, RouterLink],
 })
-export class AccessComponent { }
+export class AccessComponent {
+}

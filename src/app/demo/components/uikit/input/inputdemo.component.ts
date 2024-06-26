@@ -1,28 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { SelectItem, SharedModule } from 'primeng/api';
-import { CountryService } from 'src/app/demo/service/country.service';
-import { ButtonModule } from 'primeng/button';
-import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { InputGroupModule } from 'primeng/inputgroup';
-import { SelectButtonModule } from 'primeng/selectbutton';
-import { ToggleButtonModule } from 'primeng/togglebutton';
-import { MultiSelectModule } from 'primeng/multiselect';
-import { DropdownModule } from 'primeng/dropdown';
-import { ListboxModule } from 'primeng/listbox';
-import { InputSwitchModule } from 'primeng/inputswitch';
-import { CheckboxModule } from 'primeng/checkbox';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { KnobModule } from 'primeng/knob';
-import { ColorPickerModule } from 'primeng/colorpicker';
-import { RatingModule } from 'primeng/rating';
-import { SliderModule } from 'primeng/slider';
-import { ChipsModule } from 'primeng/chips';
-import { InputNumberModule } from 'primeng/inputnumber';
-import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { InputTextModule } from 'primeng/inputtext';
+import {Component, OnInit} from '@angular/core';
+import {SelectItem, SharedModule} from 'primeng/api';
+import {CountryService} from 'src/app/demo/service/country.service';
+import {ButtonModule} from 'primeng/button';
+import {InputGroupAddonModule} from 'primeng/inputgroupaddon';
+import {InputGroupModule} from 'primeng/inputgroup';
+import {SelectButtonModule} from 'primeng/selectbutton';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {DropdownModule} from 'primeng/dropdown';
+import {ListboxModule} from 'primeng/listbox';
+import {InputSwitchModule} from 'primeng/inputswitch';
+import {CheckboxModule} from 'primeng/checkbox';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {KnobModule} from 'primeng/knob';
+import {ColorPickerModule} from 'primeng/colorpicker';
+import {RatingModule} from 'primeng/rating';
+import {SliderModule} from 'primeng/slider';
+import {ChipsModule} from 'primeng/chips';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {CalendarModule} from 'primeng/calendar';
+import {FormsModule} from '@angular/forms';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputTextModule} from 'primeng/inputtext';
 
 @Component({
     templateUrl: './inputdemo.component.html',
@@ -30,7 +30,7 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [InputTextModule, InputTextareaModule, AutoCompleteModule, FormsModule, CalendarModule, InputNumberModule, ChipsModule, SliderModule, RatingModule, ColorPickerModule, KnobModule, RadioButtonModule, CheckboxModule, InputSwitchModule, ListboxModule, DropdownModule, MultiSelectModule, SharedModule, ToggleButtonModule, SelectButtonModule, InputGroupModule, InputGroupAddonModule, ButtonModule]
 })
 export class InputDemoComponent implements OnInit {
-    
+
     countries: any[] = [];
 
     filteredCountries: any[] = [];
@@ -51,9 +51,9 @@ export class InputDemoComponent implements OnInit {
 
     cities: SelectItem[] = [];
 
-    selectedList: SelectItem = { value: '' };
+    selectedList: SelectItem = {value: ''};
 
-    selectedDrop: SelectItem = { value: '' };
+    selectedDrop: SelectItem = {value: ''};
 
     selectedMulti: any[] = [];
 
@@ -67,7 +67,8 @@ export class InputDemoComponent implements OnInit {
 
     valueKnob = 20;
 
-    constructor(private countryService: CountryService) { }
+    constructor(private countryService: CountryService) {
+    }
 
     ngOnInit() {
         this.countryService.getCountries().then(countries => {
@@ -75,17 +76,17 @@ export class InputDemoComponent implements OnInit {
         });
 
         this.cities = [
-            { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
-            { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
-            { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
-            { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
-            { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
+            {label: 'New York', value: {id: 1, name: 'New York', code: 'NY'}},
+            {label: 'Rome', value: {id: 2, name: 'Rome', code: 'RM'}},
+            {label: 'London', value: {id: 3, name: 'London', code: 'LDN'}},
+            {label: 'Istanbul', value: {id: 4, name: 'Istanbul', code: 'IST'}},
+            {label: 'Paris', value: {id: 5, name: 'Paris', code: 'PRS'}}
         ];
 
         this.paymentOptions = [
-            { name: 'Option 1', value: 1 },
-            { name: 'Option 2', value: 2 },
-            { name: 'Option 3', value: 3 }
+            {name: 'Option 1', value: 1},
+            {name: 'Option 2', value: 2},
+            {name: 'Option 3', value: 3}
         ];
     }
 

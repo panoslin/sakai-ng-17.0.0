@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { RouterLink } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { CheckboxModule } from 'primeng/checkbox';
-import { FormsModule } from '@angular/forms';
-import { PasswordModule } from 'primeng/password';
-import { InputTextModule } from 'primeng/inputtext';
+import {Component} from '@angular/core';
+import {LayoutService} from 'src/app/layout/service/app.layout.service';
+import {RouterLink} from '@angular/router';
+import {ButtonModule} from 'primeng/button';
+import {CheckboxModule} from 'primeng/checkbox';
+import {FormsModule} from '@angular/forms';
+import {PasswordModule} from 'primeng/password';
+import {InputTextModule} from 'primeng/inputtext';
 
 @Component({
     selector: 'app-login',
@@ -27,5 +27,6 @@ export class LoginComponent {
 
     password!: string;
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService) {
+    }
 }

@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { MegaMenuItem, MenuItem, SharedModule } from 'primeng/api';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { MegaMenuModule } from 'primeng/megamenu';
-import { ContextMenuModule } from 'primeng/contextmenu';
-import { ButtonModule } from 'primeng/button';
-import { MenuModule } from 'primeng/menu';
-import { TieredMenuModule } from 'primeng/tieredmenu';
-import { RouterOutlet } from '@angular/router';
-import { StepsModule } from 'primeng/steps';
-import { TabMenuModule } from 'primeng/tabmenu';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
-import { InputTextModule } from 'primeng/inputtext';
-import { MenubarModule } from 'primeng/menubar';
+import {Component, OnInit} from '@angular/core';
+import {MegaMenuItem, MenuItem, SharedModule} from 'primeng/api';
+import {PanelMenuModule} from 'primeng/panelmenu';
+import {MegaMenuModule} from 'primeng/megamenu';
+import {ContextMenuModule} from 'primeng/contextmenu';
+import {ButtonModule} from 'primeng/button';
+import {MenuModule} from 'primeng/menu';
+import {TieredMenuModule} from 'primeng/tieredmenu';
+import {RouterOutlet} from '@angular/router';
+import {StepsModule} from 'primeng/steps';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+import {InputTextModule} from 'primeng/inputtext';
+import {MenubarModule} from 'primeng/menubar';
 
 @Component({
     templateUrl: './menus.component.html',
@@ -123,7 +123,7 @@ export class MenusComponent implements OnInit {
                     }
                 ]
             },
-            { separator: true },
+            {separator: true},
             {
                 label: 'Quit',
                 icon: 'pi pi-fw pi-sign-out'
@@ -294,18 +294,18 @@ export class MenusComponent implements OnInit {
         ];
 
         this.breadcrumbItems = [];
-        this.breadcrumbItems.push({ label: 'Electronics' });
-        this.breadcrumbItems.push({ label: 'Computer' });
-        this.breadcrumbItems.push({ label: 'Notebook' });
-        this.breadcrumbItems.push({ label: 'Accessories' });
-        this.breadcrumbItems.push({ label: 'Backpacks' });
-        this.breadcrumbItems.push({ label: 'Item' });
+        this.breadcrumbItems.push({label: 'Electronics'});
+        this.breadcrumbItems.push({label: 'Computer'});
+        this.breadcrumbItems.push({label: 'Notebook'});
+        this.breadcrumbItems.push({label: 'Accessories'});
+        this.breadcrumbItems.push({label: 'Backpacks'});
+        this.breadcrumbItems.push({label: 'Item'});
 
         this.routeItems = [
-            { label: 'Personal', routerLink: 'personal' },
-            { label: 'Seat', routerLink: 'seat' },
-            { label: 'Payment', routerLink: 'payment' },
-            { label: 'Confirmation', routerLink: 'confirmation' },
+            {label: 'Personal', routerLink: 'personal'},
+            {label: 'Seat', routerLink: 'seat'},
+            {label: 'Payment', routerLink: 'payment'},
+            {label: 'Confirmation', routerLink: 'confirmation'},
         ];
 
         this.megaMenuItems = [
@@ -315,21 +315,21 @@ export class MenusComponent implements OnInit {
                     [
                         {
                             label: 'Women',
-                            items: [{ label: 'Women Item' }, { label: 'Women Item' }, { label: 'Women Item' }]
+                            items: [{label: 'Women Item'}, {label: 'Women Item'}, {label: 'Women Item'}]
                         },
                         {
                             label: 'Men',
-                            items: [{ label: 'Men Item' }, { label: 'Men Item' }, { label: 'Men Item' }]
+                            items: [{label: 'Men Item'}, {label: 'Men Item'}, {label: 'Men Item'}]
                         }
                     ],
                     [
                         {
                             label: 'Kids',
-                            items: [{ label: 'Kids Item' }, { label: 'Kids Item' }]
+                            items: [{label: 'Kids Item'}, {label: 'Kids Item'}]
                         },
                         {
                             label: 'Luggage',
-                            items: [{ label: 'Luggage Item' }, { label: 'Luggage Item' }, { label: 'Luggage Item' }]
+                            items: [{label: 'Luggage Item'}, {label: 'Luggage Item'}, {label: 'Luggage Item'}]
                         }
                     ]
                 ]
@@ -340,27 +340,27 @@ export class MenusComponent implements OnInit {
                     [
                         {
                             label: 'Computer',
-                            items: [{ label: 'Computer Item' }, { label: 'Computer Item' }]
+                            items: [{label: 'Computer Item'}, {label: 'Computer Item'}]
                         },
                         {
                             label: 'Camcorder',
-                            items: [{ label: 'Camcorder Item' }, { label: 'Camcorder Item' }, { label: 'Camcorder Item' }]
+                            items: [{label: 'Camcorder Item'}, {label: 'Camcorder Item'}, {label: 'Camcorder Item'}]
                         }
                     ],
                     [
                         {
                             label: 'TV',
-                            items: [{ label: 'TV Item' }, { label: 'TV Item' }]
+                            items: [{label: 'TV Item'}, {label: 'TV Item'}]
                         },
                         {
                             label: 'Audio',
-                            items: [{ label: 'Audio Item' }, { label: 'Audio Item' }, { label: 'Audio Item' }]
+                            items: [{label: 'Audio Item'}, {label: 'Audio Item'}, {label: 'Audio Item'}]
                         }
                     ],
                     [
                         {
                             label: 'Sports.7',
-                            items: [{ label: 'Sports.7.1' }, { label: 'Sports.7.2' }]
+                            items: [{label: 'Sports.7.1'}, {label: 'Sports.7.2'}]
                         }
                     ]
                 ]
@@ -371,21 +371,21 @@ export class MenusComponent implements OnInit {
                     [
                         {
                             label: 'Living Room',
-                            items: [{ label: 'Living Room Item' }, { label: 'Living Room Item' }]
+                            items: [{label: 'Living Room Item'}, {label: 'Living Room Item'}]
                         },
                         {
                             label: 'Kitchen',
-                            items: [{ label: 'Kitchen Item' }, { label: 'Kitchen Item' }, { label: 'Kitchen Item' }]
+                            items: [{label: 'Kitchen Item'}, {label: 'Kitchen Item'}, {label: 'Kitchen Item'}]
                         }
                     ],
                     [
                         {
                             label: 'Bedroom',
-                            items: [{ label: 'Bedroom Item' }, { label: 'Bedroom Item' }]
+                            items: [{label: 'Bedroom Item'}, {label: 'Bedroom Item'}]
                         },
                         {
                             label: 'Outdoor',
-                            items: [{ label: 'Outdoor Item' }, { label: 'Outdoor Item' }, { label: 'Outdoor Item' }]
+                            items: [{label: 'Outdoor Item'}, {label: 'Outdoor Item'}, {label: 'Outdoor Item'}]
                         }
                     ]
                 ]
@@ -396,17 +396,17 @@ export class MenusComponent implements OnInit {
                     [
                         {
                             label: 'Basketball',
-                            items: [{ label: 'Basketball Item' }, { label: 'Basketball Item' }]
+                            items: [{label: 'Basketball Item'}, {label: 'Basketball Item'}]
                         },
                         {
                             label: 'Football',
-                            items: [{ label: 'Football Item' }, { label: 'Football Item' }, { label: 'Football Item' }]
+                            items: [{label: 'Football Item'}, {label: 'Football Item'}, {label: 'Football Item'}]
                         }
                     ],
                     [
                         {
                             label: 'Tennis',
-                            items: [{ label: 'Tennis Item' }, { label: 'Tennis Item' }]
+                            items: [{label: 'Tennis Item'}, {label: 'Tennis Item'}]
                         }
                     ]
                 ]

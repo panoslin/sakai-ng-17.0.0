@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { ChipModule } from 'primeng/chip';
-import { CheckboxModule } from 'primeng/checkbox';
-import { InputTextModule } from 'primeng/inputtext';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
-import { BlockViewerComponent } from '../blockviewer/blockviewer.component';
+import {Component} from '@angular/core';
+import {ChipModule} from 'primeng/chip';
+import {CheckboxModule} from 'primeng/checkbox';
+import {InputTextModule} from 'primeng/inputtext';
+import {RippleModule} from 'primeng/ripple';
+import {ButtonModule} from 'primeng/button';
+import {BlockViewerComponent} from '../blockviewer/blockviewer.component';
 
 @Component({
     templateUrl: './blocks.component.html',
     standalone: true,
     imports: [BlockViewerComponent, ButtonModule, RippleModule, InputTextModule, CheckboxModule, ChipModule]
 })
-export class BlocksComponent{
+export class BlocksComponent {
 
     block1: string = `
 <div class="grid grid-nogutter surface-section text-800">

@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription, debounceTime } from 'rxjs';
-import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { ChartModule } from 'primeng/chart';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {debounceTime, Subscription} from 'rxjs';
+import {LayoutService} from 'src/app/layout/service/app.layout.service';
+import {ChartModule} from 'primeng/chart';
 
 @Component({
     templateUrl: './chartsdemo.component.html',
@@ -31,6 +31,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
     radarOptions: any;
 
     subscription: Subscription;
+
     constructor(private layoutService: LayoutService) {
         this.subscription = this.layoutService.configUpdate$
             .pipe(debounceTime(25))
@@ -48,7 +49,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
         const textColor = documentStyle.getPropertyValue('--text-color');
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-        
+
         this.barData = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
@@ -269,5 +270,5 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
             this.subscription.unsubscribe();
         }
     }
-    
+
 }

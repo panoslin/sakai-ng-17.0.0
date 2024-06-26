@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { MessageService, SharedModule } from 'primeng/api';
-import { NgIf, NgFor } from '@angular/common';
-import { FileUploadModule } from 'primeng/fileupload';
+import {Component} from '@angular/core';
+import {MessageService, SharedModule} from 'primeng/api';
+import {NgFor, NgIf} from '@angular/common';
+import {FileUploadModule} from 'primeng/fileupload';
 
 @Component({
     templateUrl: './filedemo.component.html',
@@ -13,18 +13,19 @@ export class FileDemoComponent {
 
     uploadedFiles: any[] = [];
 
-    constructor(private messageService: MessageService) {}
+    constructor(private messageService: MessageService) {
+    }
 
     onUpload(event: any) {
         for (const file of event.files) {
             this.uploadedFiles.push(file);
         }
 
-        this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded' });
+        this.messageService.add({severity: 'info', summary: 'Success', detail: 'File Uploaded'});
     }
 
     onBasicUpload() {
-        this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded with Basic Mode' });
+        this.messageService.add({severity: 'info', summary: 'Success', detail: 'File Uploaded with Basic Mode'});
     }
 
 }

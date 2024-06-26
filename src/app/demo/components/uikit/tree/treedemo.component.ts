@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { NodeService } from 'src/app/demo/service/node.service';
-import { TreeNode, SharedModule } from 'primeng/api';
-import { NgFor, NgIf } from '@angular/common';
-import { TreeTableModule } from 'primeng/treetable';
-import { TreeModule } from 'primeng/tree';
+import {Component, OnInit} from '@angular/core';
+import {NodeService} from 'src/app/demo/service/node.service';
+import {SharedModule, TreeNode} from 'primeng/api';
+import {NgFor, NgIf} from '@angular/common';
+import {TreeTableModule} from 'primeng/treetable';
+import {TreeModule} from 'primeng/tree';
 
 @Component({
     templateUrl: './treedemo.component.html',
@@ -26,7 +26,8 @@ export class TreeDemoComponent implements OnInit {
 
     cols: any[] = [];
 
-    constructor(private nodeService: NodeService) {}
+    constructor(private nodeService: NodeService) {
+    }
 
     ngOnInit() {
         this.nodeService.getFiles().then(files => this.files1 = files);
@@ -39,9 +40,9 @@ export class TreeDemoComponent implements OnInit {
         });
 
         this.cols = [
-            { field: 'name', header: 'Name' },
-            { field: 'size', header: 'Size' },
-            { field: 'type', header: 'Type' }
+            {field: 'name', header: 'Name'},
+            {field: 'size', header: 'Size'},
+            {field: 'type', header: 'Type'}
         ];
     }
 }

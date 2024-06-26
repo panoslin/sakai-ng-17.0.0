@@ -1,6 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
-import { LayoutService } from "./service/app.layout.service";
-import { AppMenuComponent } from './app.menu.component';
+import {Component, ElementRef} from '@angular/core';
+import {LayoutService} from "./service/app.layout.service";
+import {AppMenuComponent} from './app.menu.component';
 
 @Component({
     selector: 'app-sidebar',
@@ -9,6 +9,7 @@ import { AppMenuComponent } from './app.menu.component';
     imports: [AppMenuComponent]
 })
 export class AppSidebarComponent {
-    constructor(public layoutService: LayoutService, public el: ElementRef) { }
+    constructor(public layoutService: LayoutService, public el: ElementRef) {
+    }
 }
 
